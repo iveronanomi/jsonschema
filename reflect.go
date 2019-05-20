@@ -70,6 +70,8 @@ type Type struct {
 	// RFC draft-wright-json-schema-hyperschema-00, section 4
 	Media          *Type  `json:"media,omitempty"`          // section 4.3
 	BinaryEncoding string `json:"binaryEncoding,omitempty"` // section 4.3
+	// Not standard fields
+	Patch *Type `json:"$$patch,omitempty"`
 }
 
 // Reflect reflects to Schema from a value using the default Reflector
